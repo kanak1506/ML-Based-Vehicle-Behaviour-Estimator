@@ -1,10 +1,18 @@
 # Vehicle Dynamics ML
 
+![Python](https://img.shields.io/badge/Python-3.10-3776AB?logo=python&logoColor=white)
+![scikit--learn](https://img.shields.io/badge/scikit--learn-1.7-F7931E?logo=scikitlearn&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B?logo=streamlit&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 Predicts **Roll Gradient (RG)** and **Understeer Gradient (UG)** — two standard
 vehicle-handling metrics — from physical vehicle specifications, using a
 three-model scikit-learn pipeline (Ridge, Random Forest, MLP) with nested,
 vehicle-grouped cross-validation. Includes a Streamlit dashboard for
 interactive prediction, retraining, and diagnostics.
+
+<!-- TODO: screenshot of the Streamlit dashboard's prediction tab -->
+<!-- TODO: sample evaluation figure from Reports/ (e.g. predicted vs. actual RG/UG scatter) -->
 
 > **Scope of this repo.** This contains the ML pipeline and dashboard code
 > only. The underlying test dataset, trained model artifacts, and exploratory
