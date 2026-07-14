@@ -1,18 +1,20 @@
-# Vehicle Dynamics ML
+# ML-Based Vehicle Behaviour Estimator
 
 ![Python](https://img.shields.io/badge/Python-3.10-3776AB?logo=python&logoColor=white)
 ![scikit--learn](https://img.shields.io/badge/scikit--learn-1.7-F7931E?logo=scikitlearn&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B?logo=streamlit&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-Predicts **Roll Gradient (RG)** and **Understeer Gradient (UG)** — two standard
-vehicle-handling metrics — from physical vehicle specifications, using a
-three-model scikit-learn pipeline (Ridge, Random Forest, MLP) with nested,
-vehicle-grouped cross-validation. Includes a Streamlit dashboard for
-interactive prediction, retraining, and diagnostics.
+**Predicts Roll Gradient (RG) and Understeer Gradient (UG) — two standard vehicle-handling metrics — from physical vehicle specifications**
 
 <!-- TODO: screenshot of the Streamlit dashboard's prediction tab -->
 <!-- TODO: sample evaluation figure from Reports/ (e.g. predicted vs. actual RG/UG scatter) -->
+
+---
+
+## Problem Statement
+
+Estimating how a vehicle will handle — its roll gradient and understeer/oversteer tendency — normally requires physical prototypes and instrumented test tracks. This project builds a scikit-learn pipeline (Ridge, Random Forest, MLP) with nested, vehicle-grouped cross-validation that predicts both metrics directly from a vehicle's design specs (loads, CG height, track width, tyre data, suspension config), before a physical test is ever run. A Streamlit dashboard wraps the pipeline for interactive prediction, retraining, and diagnostics.
 
 > **Scope of this repo.** This contains the ML pipeline and dashboard code
 > only. The underlying test dataset, trained model artifacts, and exploratory
@@ -195,3 +197,9 @@ models were trained on. Notable behaviors:
 - If a saved model expects a feature that the current `feature_engineering.py`
   doesn't produce, the dashboard raises a hard error instead of predicting
   from a wrong/missing value.
+
+---
+
+## License
+
+[MIT](LICENSE) © 2026 Kanak Potdar
