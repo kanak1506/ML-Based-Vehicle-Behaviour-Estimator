@@ -8,7 +8,7 @@
 **Predicts Roll Gradient (RG) and Understeer Gradient (UG) — two standard vehicle-handling metrics — from physical vehicle specifications**
 
 <!-- TODO: screenshot of the Streamlit dashboard's prediction tab -->
-<!-- TODO: sample evaluation figure from Reports/ (e.g. predicted vs. actual RG/UG scatter) -->
+![LOOCV actual vs predicted — Roll Gradient and Understeer Gradient](docs/actual_vs_predicted.png)
 
 ---
 
